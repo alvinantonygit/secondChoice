@@ -10,6 +10,9 @@ def home(request):
 
     }
     return render(request,'pages/home.html',data)
+def cars(request):
+    
+    return render(request,'cars/cars.html')
 
 def about(request):
     teams=Team.objects.all()
