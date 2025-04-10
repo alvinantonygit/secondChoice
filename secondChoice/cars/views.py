@@ -25,4 +25,10 @@ def car_detail(request, id):
 
 
 def search(request):
-    return render(request, 'cars/search.html')  # Fixed: file extension
+
+    car=Car.objects.order_by('-created_date')
+
+    data= {
+        'cars':car,
+    }
+    return render(request, 'cars/search.html',data)  # Fixed: file extension
