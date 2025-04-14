@@ -95,8 +95,7 @@
 
 
                 </div>
-                <!-- Page navigation start-->
-
+                <!-- Page navigation start -->
                 <div class="pagination-box p-box-2 text-center">
                     <nav aria-label="Page navigation example">
                       {% if cars.has_other_pages %}
@@ -133,86 +132,62 @@
                       {% endif %}
                     </nav>
                 </div>
-                
-                <!-- Search box -->
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="sidebar-right">
+                    <!-- Advanced search start -->
+                    <div class="widget advanced-search2">
+                        <h3 class="sidebar-title">Search your desire car</h3>
+                        <form action="{% url 'search' %}" method="GET">
+                            <div class="form-group">
+                                <input type="text" name="keyword" placeholder="Search by name" class="form-control">
+                            </div>
 
-                <!-- Full Page Search -->
-                <div id="full-page-search">
-                <button type="button" class="close">×</button>
-                <form action="https://storage.googleapis.com/theme-vessel/carhouse/index.html#" class="search-header">
-                <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" />
-                <button type="submit" class="btn btn-sm button-theme">Search</button>
-                </form>
-                </div>
+                            <div class="form-group">
+                                <select class="form-control search-fields" name="model">
+                                    <option selected="true" disabled="disabled">Model</option>
+                                    {% for model in search_model %}
+                                      <option value="{{model}}">{{model}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control search-fields" name="city">
+                                    <option selected="true" disabled="disabled">Location</option>
+                                    {% for city in search_city %}
+                                      <option value="{{city}}">{{city}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control search-fields" name="year">
+                                    <option selected="true" disabled="disabled">Year</option>
+                                    {% for year in search_year %}
+                                      <option value="{{year}}">{{year}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control search-fields" name="body_style">
+                                    <option selected="true" disabled="disabled">Select Type Of Car</option>
+                                    {% for body_style in search_body_style %}
+                                      <option value="{{body_style}}">{{body_style}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="range-slider clearfix">
+                                            <label>Price</label>
+                                            <div data-min="0" data-max="1500000"  data-min-name="min_price" data-max-name="max_price" data-unit="RS" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                            <div class="form-group">
+                                <button class="btn btn-block button-theme btn-md">
+                                    <i class="fa fa-search"></i> Search
+                                </button>
+                            </div>
+                        </form>
+                    </div>
 
-                <div class="col-lg-4 col-md-12">
-                    <div class="sidebar-right">
-                <div class="col-lg-4 col-md-12">
-                    <div class="sidebar-right">
-                        <!-- Advanced search start -->
-                        <div class="widget advanced-search2">
-                            <h3 class="sidebar-title">Search your desire car</h3>
-                            <form method="GET">
-                                <div class="form-group">
-                                    <select class="selectpicker search-fields" name="brand">
-                                        <option>Brand</option>
-                                        <option>Any</option>
-                                        <option>New</option>
-                                        <option>Semi-New</option>
-                                        <option>Damaged</option>
-                                        <option>Used</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <select class="selectpicker search-fields" name="location">
-                                        <option>Location</option>
-                                        <option>United States</option>
-                                        <option>United Kingdom</option>
-                                        <option>American Samoa</option>
-                                        <option>Belgium</option>
-                                        <option>Cameroon</option>
-                                        <option>Canada</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <select class="selectpicker search-fields" name="year">
-                                        <option>Year</option>
-                                        <option>2016</option>
-                                        <option>2017</option>
-                                        <option>2018</option>
-                                        <option>2019</option>
-                                        <option>2020</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <select class="selectpicker search-fields" name="category">
-                                        <option>Category</option>
-                                        <option>Luxury Car</option>
-                                        <option>Pickup Truck</option>
-                                        <option>Minivan</option>
-                                        <option>Truck</option>
-                                        <option>Sports Car</option>
-                                        <option>Wagon</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <select class="selectpicker search-fields" name="transmission">
-                                        <option>Transmission</option>
-                                        <option>Automatic</option>
-                                        <option>Manual</option>
-                                        <option>Tiptronic</option>
-                                    </select>
-                                </div>
-                                <div class="range-slider clearfix">
-                                    <label>Price</label>
-                                    <div data-min="0" data-max="150000"  data-min-name="min_price" data-max-name="max_price" data-unit="USD" class="range-slider-ui ui-slider" aria-disabled="false"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="form-group mb-0">
-                                    <button class="search-button btn">Search</button>
-                                </div>
-                            </form>
-                        </div>
                     <!-- Question start -->
                     <div class="widget question widget-3">
                         <h5 class="sidebar-title">Follow us</h5>
