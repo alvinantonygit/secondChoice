@@ -66,7 +66,7 @@ def search(request):
             car = car.filter(model__iexact=year)
     if 'body_style' in request.GET:
         body_style = request.GET['body_style']
-        if model and model.lower() != 'body type':
+        if model and model.lower()  != 'body type':
             car = car.filter(model__iexact=body_style)
     if 'min_price' in request.GET:
         min_price=request.GET['min_price']

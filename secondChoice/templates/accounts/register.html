@@ -31,10 +31,10 @@
                     </div>
                     <h3>Create an account</h3>
                     
-                    <form action="{% url 'register'%}" method="POST">
-                        {% csrf_token %}
+                    {% include 'includes/messages.html' %}
+                    <form action="{% url 'register' %}" method="POST">
+                      {% csrf_token %}
                         <div class="form-group form-box">
-                            {% include 'includes/messages.html' %}
                             <input type="text" name="firstname" class="input-text" placeholder="First Name" required>
                             <i class="fa fa-user"></i>
                         </div>
@@ -66,8 +66,8 @@
                         </div>
                         <div class="clearfix"></div>
                         <ul class="social-list">
-                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li>
-                            <li><a href="#" class="google-bg"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
+                            <li><a  class="facebook-bg"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li>
+                            <li><a  class="google-bg"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
                         </ul>
                     </form>
                     <p>Already a member?  <a href="{% url 'login' %}" class="tempo ">login here</a></p>
