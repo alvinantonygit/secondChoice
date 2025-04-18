@@ -110,7 +110,7 @@
         <!-- Main title -->
         <div class="main-title">
             <h1>Featured <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>"We don’t just sell cars — we drive dreams, fuel journeys, and build trust, one ride at a time."</p>
         </div>
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
@@ -124,7 +124,7 @@
                                 <div class="price-box">
                                     <span>{{car.price | intcomma}}</span>
                                 </div>
-                                <img class="d-block w-100" src="{{car.car_photo.url}}" alt="car">
+                                <img class="d-block w-100" src="{{car.car_photo.url}}" alt="car"  style="min-height: 262px; max-height: 262px;">
                             </a>
                             <div class="carbox-overlap-wrapper">
                                 <div class="overlap-box">
@@ -195,7 +195,7 @@
         <!-- Main title -->
         <div class="main-title">
             <h1>Latest <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>"We don’t just sell cars — we drive dreams, fuel journeys, and build trust, one ride at a time."</p>
         </div>
         <div class="row">
             {% for car in all_cars %}
@@ -204,7 +204,7 @@
                     <div class="car-thumbnail">
                         <a href="{% url 'car_detail' car.id %}" class="car-img">
                             <div class="tag">For Sale</div>
-                            <img class="d-block w-100" src="{{car.car_photo.url}}" alt="car">
+                            <img class="d-block w-100" src="{{car.car_photo.url}}" alt="car" style="min-height: 262px; max-height: 262px;">
                             <div class="facilities-list clearfix">
                                 <ul>
                                     <li>
@@ -279,7 +279,7 @@
         <!-- Main title -->
         <div class="main-title">
             <h1>Executive <span>Team</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            <p>"Alone we can go fast, but together we go far — every win is a team effort."</p>
         </div>
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
