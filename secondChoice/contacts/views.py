@@ -15,7 +15,7 @@ def inquiry(request):
         customer_need=request.POST.get('customer_need')
         user_id=request.POST.get('user_id')
         car_title=request.POST.get('car_title')
-        city=request.POST.get('city')
+        city=request.POST.get('city') 
         email=request.POST.get('email')
         state=request.POST.get('state')
         message=request.POST.get('message')
