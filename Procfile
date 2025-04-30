@@ -1,2 +1,2 @@
-release:python manage.py migrate
-web:gunicorn secondChoice.wsgi
+python manage.py migrate
+gunicorn secondChoice.wsgi
