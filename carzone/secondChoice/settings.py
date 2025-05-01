@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wb*a!5=@1de**^n3r=qq#xpfs7+1@xsq8)tj20^84drdc6avfp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['secondchoice.onrender.com']
 
 LOGIN_REDIRECT_URL ='dashboard'
 
@@ -103,14 +104,21 @@ WSGI_APPLICATION = 'secondChoice.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'secondChoice',
+#         'USER':'postgres',
+#         'PASSWORD':'alvintsop0405',
+#         'HOST':'localhost',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'secondChoice',
-        'USER':'postgres',
-        'PASSWORD':'alvintsop0405',
-        'HOST':'localhost',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get("postgresql://secondchoice_user:D7sXmpgWlXjPjRffDb5JLQKV0vErh8dk@dpg-d09kq4uuk2gs73dierpg-a/secondchoice"),
+        conn_max_age=600,
+        ssl_require=True,
+    )
 }
 
 
