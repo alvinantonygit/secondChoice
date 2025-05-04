@@ -1,0 +1,35 @@
+[33mcommit c93fe757ea049a42594364cf7d0c22460ecc1f82[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Alvin Antony <alvinantony0467@gmail.com>
+Date:   Wed Apr 30 20:23:40 2025 +0530
+
+    change in procfile
+
+[33mcommit 539e83fbf5414bdf3bb66f9457fcbc40fb6f6efd[m
+Author: Alvin Antony <alvinantony0467@gmail.com>
+Date:   Wed Apr 30 20:16:05 2025 +0530
+
+    debug to false
+
+[33mcommit eb14bf709824d61f047632fb029935b17598e232[m
+Author: Alvin Antony <alvinantony0467@gmail.com>
+Date:   Wed Apr 30 19:51:28 2025 +0530
+
+    deploy in render
+
+[33mcommit cccb197624cd991a38c87155161002ea008b22a7[m
+Author: Alvin Antony <alvinantony0467@gmail.com>
+Date:   Wed Apr 30 07:22:21 2025 +0530
+
+    starting deployement
+
+[33mcommit d7b29a28654282219134f6b8486f855928ed30ec[m
+Author: Alvin Antony <alvinantony0467@gmail.com>
+Date:   Tue Apr 29 09:31:46 2025 +0530
+
+    Fix .gitignore to track source files
+
+[33mcommit 4c9bfabacf3b291416e899257605f38c69aeb5fc[m
+Author: Alvin Antony <alvinantony0467@gmail.com>
+Date:   Tue Apr 29 09:26:11 2025 +0530
+
+    Fix .gitignore to track source files
