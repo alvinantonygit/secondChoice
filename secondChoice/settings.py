@@ -103,16 +103,28 @@ WSGI_APPLICATION = 'secondChoice.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'secondChoice',
-        'USER':'postgres',
-        'PASSWORD':'alvintsop0405',
-        'HOST':'localhost',
+        'NAME': 'secondchoice_db',  # Database name from the connection string
+        'USER': 'secondchoice_db_user',  # Username from the connection string
+        'PASSWORD': 'ODkLw9A231gT5DU1bZrpbvvGjBbvTVfc',  # Password from the connection string
+        'HOST': 'dpg-d0bkobruibrs73del6ug-a',  # Host from the connection string
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'secondChoice',
+#         'USER':'postgres',
+#         'PASSWORD':'alvintsop0405',
+#         'HOST':'postgresql://secondchoice_db_user:ODkLw9A231gT5DU1bZrpbvvGjBbvTVfc@dpg-d0bkobruibrs73del6ug-a/secondchoice_db',
+#         'PORT':5432,
+#     }
+# }
 # DATABASES = {
 #     'default': dj_database_url.config(
 #         default=os.environ.get("postgresql://secondchoice_user:D7sXmpgWlXjPjRffDb5JLQKV0vErh8dk@dpg-d09kq4uuk2gs73dierpg-a/secondchoice"),
