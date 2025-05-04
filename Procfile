@@ -1,2 +1,2 @@
 python manage.py migrate
-gunicorn secondChoice.wsgi
+web: gunicorn secondChoice.wsgi:application
