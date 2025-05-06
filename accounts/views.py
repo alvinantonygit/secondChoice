@@ -7,20 +7,33 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def login(request):
-        if request.method == 'POST':
-            username = request.POST.get('username')  # safer way
-            password = request.POST.get('password')  # you're already using this
-            user = auth.authenticate(username=username, password=password)
+        
+        try:
 
-            if user is not None:
-                auth.login(request, user)
-                messages.success(request, 'You are now logged in.')
-                return redirect('dashboard')
-            else:
-                messages.error(request, 'Invalid login credentials')
-                return redirect('login')
-    
-        return render(request, 'accounts/login.html')
+            if request.method == 'POST':
+                username = request.POST.get('username')  # safer way
+                password = request.POST.get('password')  # you're already using this
+                user = auth.authenticate(username=username, password=password)
+
+                if user is not None:
+                    auth.login(request, user)
+                    messages.success(request, 'You are now logged in.')
+                    return redirect('dashboard')
+                else:
+                    messages.error(request, 'Invalid login credentials')
+                    return redirect('login')
+        
+        
+
+        except:
+            messages.success(request, 'You are not logged in.')
+            return redirect('home')
+        
+        
+        return render(request, 'home.html')
+
+
+        
 def register(request):
     if request.method == 'POST':
         firstname = request.POST['firstname']
