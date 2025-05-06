@@ -77,6 +77,9 @@ MIDDLEWARE = [
 
     #middleware 
     'allauth.account.middleware.AccountMiddleware',
+
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',   #for whitenoise to load static files
 ]
 
 ROOT_URLCONF = 'secondChoice.urls'
@@ -109,7 +112,7 @@ DATABASES = {
         'NAME': 'secondchoice_db',  # Database name from the connection string
         'USER': 'secondchoice_db_user',  # Username from the connection string
         'PASSWORD': 'ODkLw9A231gT5DU1bZrpbvvGjBbvTVfc',  # Password from the connection string
-        'HOST': 'dpg-d0bkobruibrs73del6ug-a',  # Host from the connection string
+        'HOST': 'dpg-d0bkobruibrs73del6ug-a.virginia-postgres.render.com',  # Host from the connection string make ful string to apply migrations to db
         'PORT': '5432',  # Default PostgreSQL port
     }
 }
@@ -173,6 +176,9 @@ STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static'),
               ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
