@@ -25,12 +25,12 @@ def login(request):
         
         
 
-        except:
-            messages.success(request, 'You are not logged in.')
+        except Exception as e:
+            messages.error(request, 'You are not logged in.{e}')
             return redirect('home')
         
+       
         
-        return render(request, 'home.html')
 
 
         
