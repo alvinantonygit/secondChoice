@@ -29,6 +29,7 @@ def login(request):
             messages.error(request, 'You are not logged in.{e}')
             return redirect('home')
         
+        return render(request, 'accounts/login.html')
        
         
 
